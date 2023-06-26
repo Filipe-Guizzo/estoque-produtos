@@ -1,37 +1,38 @@
+
 def main_menu():
     print('Olá seja bem vindo ao sistema de estoque de produtos!')
     print('Escolha uma das seguites opções para prosseguir:')
-    operation  = int(input('1 - Cadastro\n2 - Listar\n3 - Pesquisar\n4 - Atualizar\n5 - Remover\n6 - Encerrar sistema\n7 - Sair\nO que deseja fazer?: '))
+    operation  = int(input('1 - Cadastro\n2 - Listar\n3 - Pesquisar\n4 - Atualizar\n5 - Remover\n\033[31m6 - Encerrar sistema\n7 - Sair\n\033[0mO que deseja fazer?: '))
     return operation
 
 def login_menu():
     print('Olá seja bem vindo, este é o login do sistema!')
-    operation = int(input('1 - Fazer login\n2 - Fazer cadastro\n3 - Sair\nO que deseja fazer?: '))
+    operation = int(input('1 - Fazer login\n2 - Fazer cadastro\n\033[31m3 - Sair\n\033[0mO que deseja fazer?: '))
     return operation
 
 def register_menu():
     print('Escolha o que você deseja cadastrar: ')
-    operation = int(input('1 - Produto\n2 - Categoria\n3 - Cancelar\nO que deseja fazer?: '))
+    operation = int(input('1 - Produto\n2 - Categoria\n\033[31m3 - Cancelar\n\033[0mO que deseja fazer?: '))
     return operation
 
 def list_menu():
     print('Escolha o que você deseja listar: ')
-    operation = int(input('1 - Produto\n2 - Categoria\n3 - Cancelar\nO que deseja fazer?: '))
+    operation = int(input('1 - Produto\n2 - Categoria\n\033[31m3 - Cancelar\n\033[0mO que deseja fazer?: '))
     return operation
 
 def search_menu():
     print('Escolha o que você deseja pesquisar: ')
-    operation = int(input('1 - Produto\n2 - Categoria\n3 - Cancelar\nO que deseja fazer?: '))
+    operation = int(input('1 - Produto\n2 - Categoria\n\033[31m3 - Cancelar\n\033[0mO que deseja fazer?: '))
     return operation
 
 def update_menu():
     print('Escolha o que você deseja atualizar: ')
-    operation = int(input('1 - Produto\n2 - Categoria\n3 - Cancelar\nO que deseja fazer?: '))
+    operation = int(input('1 - Produto\n2 - Categoria\n\033[31m3 - Cancelar\n\033[0mO que deseja fazer?: '))
     return operation
 
 def remove_menu():
     print('Escolha o que você deseja remover: ')
-    operation = int(input('1 - Produto\n2 - Categoria\n3 - Cancelar\nO que deseja fazer?: '))
+    operation = int(input('1 - Produto\n2 - Categoria\n\033[31m3 - Cancelar\n\033[0mO que deseja fazer?: '))
     return operation
 
 def product_search_menu():

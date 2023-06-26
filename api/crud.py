@@ -76,7 +76,7 @@ class Product:
                 size = len(products)
                 id = products[size-1]['id'] + 1
         except (json.decoder.JSONDecodeError,IndexError):
-            print('AVISO: arquivo em branco ou com dados invalidos, resetando arquivo!')
+            print('\033[93mAVISO: arquivo em branco ou com dados invalidos, resetando arquivo!\033[0m')
             products = list()
             id = 1
 
@@ -93,7 +93,7 @@ class Product:
         products.append(product)
         with open('database/products.json', 'w') as json_file:
             json_file.write(json.dumps(products))
-        print('Produto criado com sucesso!')
+        print('\033[32mProduto criado com sucesso!\033[0m')
     
     def get_all(self):
         with open('database/products.json', 'r') as json_file:
@@ -127,7 +127,7 @@ class Product:
                 product['id_user'] = self.id_user
         with open('database/products.json', 'w') as json_file:
             json_file.write(json.dumps(products))
-        print('Produto atualizado com sucesso!')
+        print('\033[32mProduto atualizado com sucesso!\033[0m')
     
     def delete(self):
         id_product = self.id
@@ -137,7 +137,7 @@ class Product:
                 products.pop(products.index(product))
         with open('database/products.json', 'w') as json_file:
             json_file.write(json.dumps(products))
-        print('Produto removido com sucesso!')
+        print('\033[32mProduto removido com sucesso!\033[0m')
 
 class Category:
     product = Product()
@@ -181,7 +181,7 @@ class Category:
                 size = len(categorys)
                 id = categorys[size-1]['id'] + 1
         except (json.decoder.JSONDecodeError,IndexError):
-            print('AVISO: arquivo em branco ou com dados invalidos, resetando arquivo!')
+            print('\033[93mAVISO: arquivo em branco ou com dados invalidos, resetando arquivo!\033[0m')
             categorys = list()
             id = 1
 
@@ -193,7 +193,7 @@ class Category:
         categorys.append(category)
         with open('database/categorys.json', 'w') as json_file:
             json_file.write(json.dumps(categorys))
-        print('Categoria criada com sucesso!')
+        print('\033[32mCategoria criada com sucesso!\033[0m')
     
     def get_all(self):
         with open('database/categorys.json', 'r') as json_file:
@@ -222,7 +222,7 @@ class Category:
                 category['id_user'] = self.id_user
         with open('database/categorys.json', 'w') as json_file:
             json_file.write(json.dumps(categorys))
-        print('Categoria atualizada com sucesso!')
+        print('\033[32mCategoria atualizada com sucesso!\033[0m')
     
     def delete(self):
         id_category = self.id
@@ -243,7 +243,7 @@ class Category:
         with open('database/categorys.json', 'w') as json_file:
             json_file.write(json.dumps(categorys))
             
-        print('Categoria removida com sucesso!')
+        print('\033[32mCategoria removida com sucesso!\033[0m')
         
 class User:
     product = Product()
@@ -297,7 +297,7 @@ class User:
                 size = len(users)
                 id = users[size-1]['id'] + 1
         except (json.decoder.JSONDecodeError,IndexError):
-            print('AVISO: arquivo em branco ou com dados invalidos, resetando arquivo!')
+            print('\033[93mAVISO: arquivo em branco ou com dados invalidos, resetando arquivo!\033[0m')
             users = list()
             id = 1
 
@@ -310,7 +310,7 @@ class User:
         users.append(user)
         with open('database/users.json', 'w') as json_file:
             json_file.write(json.dumps(users))
-        print('Usuario criado com sucesso!')
+        print('\033[32mUsuario criado com sucesso!\033[0m')
         
     def get_all(self):
         with open('database/users.json', 'r') as json_file:
@@ -340,7 +340,7 @@ class User:
                 user['password'] = self.password
         with open('database/users.json', 'w') as json_file:
             json_file.write(json.dumps(users))
-        print('Usuario atualizado com sucesso!')
+        print('\033[32mUsuario atualizado com sucesso!\033[0m')
     
     def delete(self):
         id_user = self.id
@@ -373,5 +373,5 @@ class User:
         with open('database/users.json', 'w') as json_file:
             json_file.write(json.dumps(users))
             
-        print('Usuario removido com sucesso!')
+        print('\033[32mUsuario removido com sucesso!\033[0m')
     
